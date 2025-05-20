@@ -5,3 +5,4 @@
 v3/*.csv
 v3/generated-data/*.csv
 *.csv
+**/.DS_Store
