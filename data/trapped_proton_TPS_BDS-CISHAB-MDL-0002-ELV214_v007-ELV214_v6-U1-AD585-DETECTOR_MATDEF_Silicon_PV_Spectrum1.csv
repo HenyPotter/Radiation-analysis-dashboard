@@ -1,0 +1,658 @@
+'*', 9, 0, 4, 0, 4, 4, 1, 12
+'GRAS_DATA_TITLE',   -1,'TOTAL FLUENCE'
+'GRAS_DATA_TYPE',   -1,'STAT_DOUBLE'
+'GRAS_MODULE_NAME',   -1,'FLUENCE'
+'GRAS_MODULE_TYPE',   -1,'FLUENCE'
+'Fluence','counts/cm2',    1,'Scalar fluence'
+'Error','counts/cm2',    1,'Error on scalar fluence'
+'Entries','',    1,'Number of entries'
+'Non zero entries','',    1,'Number of non zero entries'
+ 2.0257e+07,  3.5928e+05,       53239,       18895
+'End of Block'
+'*', 33, 1, 25, 0, 6, 6, 50, 11
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'E- FLUENCE SPECTRUM'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'FLUENCE'
+'GRAS_MODULE_TYPE',   -1,'FLUENCE'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'FLUENCE_fluence_e-'
+'HIST_SUM_ALL_BIN_VALUES',    1, 1.6779e+06, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'FLUENCE Particle: e- Fluence spectrum in MeV'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'PARTICLE_TYPE',   -1,'e-'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'ekin'
+'X_AXIS_MAX',    1,    1e+12, ' '
+'X_AXIS_MIN',    1,    1e-05, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'MeV'
+'Y_AXIS_LABEL',   -1,'fluence'
+'Y_AXIS_UNITS',   -1,'counts/cm2'
+'lower','MeV',    1,'Bin lower edge'
+'upper','MeV',    1,'Bin upper edge'
+'mean','MeV',    1,'Bin mean'
+'value','counts/cm2',    1,'Bin value'
+'error','counts/cm2',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-05,  2.1878e-05,           0,           0,           0,           0
+ 2.1878e-05,  4.7863e-05,           0,           0,           0,           0
+ 4.7863e-05,  0.00010471,           0,           0,           0,           0
+ 0.00010471,  0.00022909,           0,           0,           0,           0
+ 0.00022909,  0.00050119,           0,           0,           0,           0
+ 0.00050119,   0.0010965,           0,      81.564,      68.963,           7
+  0.0010965,   0.0023988,           0,      859.63,      338.68,          61
+  0.0023988,   0.0052481,           0,       12563,        7105,          71
+  0.0052481,    0.011482,           0,       37135,      9611.5,          72
+   0.011482,    0.025119,           0,  1.3403e+05,       21348,         106
+   0.025119,    0.054954,           0,  3.4916e+05,       67006,         112
+   0.054954,     0.12023,           0,  7.1471e+05,  1.0654e+05,         143
+    0.12023,     0.26303,           0,  3.7403e+05,       68117,         114
+    0.26303,     0.57544,           0,       54608,       11183,          44
+    0.57544,      1.2589,           0,      693.08,      476.33,           3
+     1.2589,      2.7542,           0,           0,           0,           0
+     2.7542,      6.0256,           0,           0,           0,           0
+     6.0256,      13.183,           0,           0,           0,           0
+     13.183,       28.84,           0,           0,           0,           0
+      28.84,      63.096,           0,           0,           0,           0
+     63.096,      138.04,           0,           0,           0,           0
+     138.04,         302,           0,           0,           0,           0
+        302,      660.69,           0,           0,           0,           0
+     660.69,      1445.4,           0,           0,           0,           0
+     1445.4,      3162.3,           0,           0,           0,           0
+     3162.3,      6918.3,           0,           0,           0,           0
+     6918.3,       15136,           0,           0,           0,           0
+      15136,       33113,           0,           0,           0,           0
+      33113,       72444,           0,           0,           0,           0
+      72444,  1.5849e+05,           0,           0,           0,           0
+ 1.5849e+05,  3.4674e+05,           0,           0,           0,           0
+ 3.4674e+05,  7.5858e+05,           0,           0,           0,           0
+ 7.5858e+05,  1.6596e+06,           0,           0,           0,           0
+ 1.6596e+06,  3.6308e+06,           0,           0,           0,           0
+ 3.6308e+06,  7.9433e+06,           0,           0,           0,           0
+ 7.9433e+06,  1.7378e+07,           0,           0,           0,           0
+ 1.7378e+07,  3.8019e+07,           0,           0,           0,           0
+ 3.8019e+07,  8.3176e+07,           0,           0,           0,           0
+ 8.3176e+07,  1.8197e+08,           0,           0,           0,           0
+ 1.8197e+08,  3.9811e+08,           0,           0,           0,           0
+ 3.9811e+08,  8.7096e+08,           0,           0,           0,           0
+ 8.7096e+08,  1.9055e+09,           0,           0,           0,           0
+ 1.9055e+09,  4.1687e+09,           0,           0,           0,           0
+ 4.1687e+09,  9.1201e+09,           0,           0,           0,           0
+ 9.1201e+09,  1.9953e+10,           0,           0,           0,           0
+ 1.9953e+10,  4.3652e+10,           0,           0,           0,           0
+ 4.3652e+10,  9.5499e+10,           0,           0,           0,           0
+ 9.5499e+10,  2.0893e+11,           0,           0,           0,           0
+ 2.0893e+11,  4.5709e+11,           0,           0,           0,           0
+ 4.5709e+11,       1e+12,           0,           0,           0,           0
+'End of Block'
+'*', 33, 1, 25, 0, 6, 6, 50, 10
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'GAMMA FLUENCE SPECTRUM'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'FLUENCE'
+'GRAS_MODULE_TYPE',   -1,'FLUENCE'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'FLUENCE_fluence_gamma'
+'HIST_SUM_ALL_BIN_VALUES',    1,    19285, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'FLUENCE Particle: gamma Fluence spectrum in MeV'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'PARTICLE_TYPE',   -1,'gamma'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'ekin'
+'X_AXIS_MAX',    1,    1e+12, ' '
+'X_AXIS_MIN',    1,    1e-05, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'MeV'
+'Y_AXIS_LABEL',   -1,'fluence'
+'Y_AXIS_UNITS',   -1,'counts/cm2'
+'lower','MeV',    1,'Bin lower edge'
+'upper','MeV',    1,'Bin upper edge'
+'mean','MeV',    1,'Bin mean'
+'value','counts/cm2',    1,'Bin value'
+'error','counts/cm2',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-05,  2.1878e-05,           0,           0,           0,           0
+ 2.1878e-05,  4.7863e-05,           0,           0,           0,           0
+ 4.7863e-05,  0.00010471,           0,           0,           0,           0
+ 0.00010471,  0.00022909,           0,           0,           0,           0
+ 0.00022909,  0.00050119,           0,           0,           0,           0
+ 0.00050119,   0.0010965,           0,           0,           0,           0
+  0.0010965,   0.0023988,           0,           0,           0,           0
+  0.0023988,   0.0052481,           0,           0,           0,           0
+  0.0052481,    0.011482,           0,           0,           0,           0
+   0.011482,    0.025119,           0,      4394.5,      4394.5,           1
+   0.025119,    0.054954,           0,           0,           0,           0
+   0.054954,     0.12023,           0,      3874.1,      3152.3,           2
+    0.12023,     0.26303,           0,       11016,      6062.7,           4
+    0.26303,     0.57544,           0,           0,           0,           0
+    0.57544,      1.2589,           0,           0,           0,           0
+     1.2589,      2.7542,           0,           0,           0,           0
+     2.7542,      6.0256,           0,           0,           0,           0
+     6.0256,      13.183,           0,           0,           0,           0
+     13.183,       28.84,           0,           0,           0,           0
+      28.84,      63.096,           0,           0,           0,           0
+     63.096,      138.04,           0,           0,           0,           0
+     138.04,         302,           0,           0,           0,           0
+        302,      660.69,           0,           0,           0,           0
+     660.69,      1445.4,           0,           0,           0,           0
+     1445.4,      3162.3,           0,           0,           0,           0
+     3162.3,      6918.3,           0,           0,           0,           0
+     6918.3,       15136,           0,           0,           0,           0
+      15136,       33113,           0,           0,           0,           0
+      33113,       72444,           0,           0,           0,           0
+      72444,  1.5849e+05,           0,           0,           0,           0
+ 1.5849e+05,  3.4674e+05,           0,           0,           0,           0
+ 3.4674e+05,  7.5858e+05,           0,           0,           0,           0
+ 7.5858e+05,  1.6596e+06,           0,           0,           0,           0
+ 1.6596e+06,  3.6308e+06,           0,           0,           0,           0
+ 3.6308e+06,  7.9433e+06,           0,           0,           0,           0
+ 7.9433e+06,  1.7378e+07,           0,           0,           0,           0
+ 1.7378e+07,  3.8019e+07,           0,           0,           0,           0
+ 3.8019e+07,  8.3176e+07,           0,           0,           0,           0
+ 8.3176e+07,  1.8197e+08,           0,           0,           0,           0
+ 1.8197e+08,  3.9811e+08,           0,           0,           0,           0
+ 3.9811e+08,  8.7096e+08,           0,           0,           0,           0
+ 8.7096e+08,  1.9055e+09,           0,           0,           0,           0
+ 1.9055e+09,  4.1687e+09,           0,           0,           0,           0
+ 4.1687e+09,  9.1201e+09,           0,           0,           0,           0
+ 9.1201e+09,  1.9953e+10,           0,           0,           0,           0
+ 1.9953e+10,  4.3652e+10,           0,           0,           0,           0
+ 4.3652e+10,  9.5499e+10,           0,           0,           0,           0
+ 9.5499e+10,  2.0893e+11,           0,           0,           0,           0
+ 2.0893e+11,  4.5709e+11,           0,           0,           0,           0
+ 4.5709e+11,       1e+12,           0,           0,           0,           0
+'End of Block'
+'*', 33, 1, 25, 0, 6, 6, 50, 9
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'PROTON FLUENCE SPECTRUM'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'FLUENCE'
+'GRAS_MODULE_TYPE',   -1,'FLUENCE'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'FLUENCE_fluence_proton'
+'HIST_SUM_ALL_BIN_VALUES',    1, 1.856e+07, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'FLUENCE Particle: proton Fluence spectrum in MeV'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'PARTICLE_TYPE',   -1,'proton'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'ekin'
+'X_AXIS_MAX',    1,    1e+12, ' '
+'X_AXIS_MIN',    1,    1e-05, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'MeV'
+'Y_AXIS_LABEL',   -1,'fluence'
+'Y_AXIS_UNITS',   -1,'counts/cm2'
+'lower','MeV',    1,'Bin lower edge'
+'upper','MeV',    1,'Bin upper edge'
+'mean','MeV',    1,'Bin mean'
+'value','counts/cm2',    1,'Bin value'
+'error','counts/cm2',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-05,  2.1878e-05,           0,           0,           0,           0
+ 2.1878e-05,  4.7863e-05,           0,           0,           0,           0
+ 4.7863e-05,  0.00010471,           0,           0,           0,           0
+ 0.00010471,  0.00022909,           0,           0,           0,           0
+ 0.00022909,  0.00050119,           0,           0,           0,           0
+ 0.00050119,   0.0010965,           0,      7.2659,      1.0779,          80
+  0.0010965,   0.0023988,           0,      83.923,      3.9993,         758
+  0.0023988,   0.0052481,           0,      137.12,      6.3409,         848
+  0.0052481,    0.011482,           0,       239.7,      10.329,         991
+   0.011482,    0.025119,           0,      438.77,      17.651,        1085
+   0.025119,    0.054954,           0,      643.61,      26.098,        1080
+   0.054954,     0.12023,           0,      1348.5,      53.126,        1141
+    0.12023,     0.26303,           0,        3205,      123.29,        1194
+    0.26303,     0.57544,           0,      9045.4,      356.84,        1144
+    0.57544,      1.2589,           0,       29279,      1085.5,        1187
+     1.2589,      2.7542,           0,       96223,      3627.7,        1217
+     2.7542,      6.0256,           0,  3.3339e+05,       12695,        1201
+     6.0256,      13.183,           0,   1.081e+06,       37815,        1206
+     13.183,       28.84,           0,  2.8996e+06,       92580,        1231
+      28.84,      63.096,           0,   4.593e+06,  1.3599e+05,        1203
+     63.096,      138.04,           0,  5.7296e+06,  1.6806e+05,        1175
+     138.04,         302,           0,  3.5787e+06,  1.1134e+05,        1124
+        302,      660.69,           0,   2.039e+05,       13712,         368
+     660.69,      1445.4,           0,           0,           0,           0
+     1445.4,      3162.3,           0,           0,           0,           0
+     3162.3,      6918.3,           0,           0,           0,           0
+     6918.3,       15136,           0,           0,           0,           0
+      15136,       33113,           0,           0,           0,           0
+      33113,       72444,           0,           0,           0,           0
+      72444,  1.5849e+05,           0,           0,           0,           0
+ 1.5849e+05,  3.4674e+05,           0,           0,           0,           0
+ 3.4674e+05,  7.5858e+05,           0,           0,           0,           0
+ 7.5858e+05,  1.6596e+06,           0,           0,           0,           0
+ 1.6596e+06,  3.6308e+06,           0,           0,           0,           0
+ 3.6308e+06,  7.9433e+06,           0,           0,           0,           0
+ 7.9433e+06,  1.7378e+07,           0,           0,           0,           0
+ 1.7378e+07,  3.8019e+07,           0,           0,           0,           0
+ 3.8019e+07,  8.3176e+07,           0,           0,           0,           0
+ 8.3176e+07,  1.8197e+08,           0,           0,           0,           0
+ 1.8197e+08,  3.9811e+08,           0,           0,           0,           0
+ 3.9811e+08,  8.7096e+08,           0,           0,           0,           0
+ 8.7096e+08,  1.9055e+09,           0,           0,           0,           0
+ 1.9055e+09,  4.1687e+09,           0,           0,           0,           0
+ 4.1687e+09,  9.1201e+09,           0,           0,           0,           0
+ 9.1201e+09,  1.9953e+10,           0,           0,           0,           0
+ 1.9953e+10,  4.3652e+10,           0,           0,           0,           0
+ 4.3652e+10,  9.5499e+10,           0,           0,           0,           0
+ 9.5499e+10,  2.0893e+11,           0,           0,           0,           0
+ 2.0893e+11,  4.5709e+11,           0,           0,           0,           0
+ 4.5709e+11,       1e+12,           0,           0,           0,           0
+'End of Block'
+'*', 9, 0, 4, 0, 4, 4, 1, 8
+'GRAS_DATA_TITLE',   -1,'LET'
+'GRAS_DATA_TYPE',   -1,'STAT_DOUBLE'
+'GRAS_MODULE_NAME',   -1,'LET'
+'GRAS_MODULE_TYPE',   -1,'LET'
+'LET','MeV/cm',    1,'Scalar LET'
+'Error','MeV/cm',    1,'Error on scalar LET'
+'Entries','',    1,'Number of entries'
+'Non zero entries','',    1,'Number of non zero entries'
+     802.13,  2.1353e+05,       18778,       18778
+'End of Block'
+'*', 32, 1, 24, 0, 6, 6, 50, 7
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'LET SPECTRUM'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'LET'
+'GRAS_MODULE_TYPE',   -1,'LET'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'LET_LET'
+'HIST_SUM_ALL_BIN_VALUES',    1, 5.1142e+05, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'LET Particle: all LET spectrum in MeV/cm'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'LET'
+'X_AXIS_MAX',    1,    1e+12, ' '
+'X_AXIS_MIN',    1,    1e-08, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'MeV/cm'
+'Y_AXIS_LABEL',   -1,' '
+'Y_AXIS_UNITS',   -1,'counts'
+'lower','MeV/cm',    1,'Bin lower edge'
+'upper','MeV/cm',    1,'Bin upper edge'
+'mean','MeV/cm',    1,'Bin mean'
+'value','counts',    1,'Bin value'
+'error','counts',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-08,  2.5119e-08,           0,           0,           0,           0
+ 2.5119e-08,  6.3096e-08,           0,           0,           0,           0
+ 6.3096e-08,  1.5849e-07,           0,           0,           0,           0
+ 1.5849e-07,  3.9811e-07,           0,           0,           0,           0
+ 3.9811e-07,       1e-06,           0,           0,           0,           0
+      1e-06,  2.5119e-06,           0,           0,           0,           0
+ 2.5119e-06,  6.3096e-06,           0,           0,           0,           0
+ 6.3096e-06,  1.5849e-05,           0,           0,           0,           0
+ 1.5849e-05,  3.9811e-05,           0,           0,           0,           0
+ 3.9811e-05,      0.0001,           0,           0,           0,           0
+     0.0001,  0.00025119,           0,           0,           0,           0
+ 0.00025119,  0.00063096,           0,           0,           0,           0
+ 0.00063096,   0.0015849,           0,           0,           0,           0
+  0.0015849,   0.0039811,           0,           0,           0,           0
+  0.0039811,        0.01,           0,           0,           0,           0
+       0.01,    0.025119,           0,           0,           0,           0
+   0.025119,    0.063096,           0,           0,           0,           0
+   0.063096,     0.15849,           0,           0,           0,           0
+    0.15849,     0.39811,           0,           0,           0,           0
+    0.39811,           1,           0,           0,           0,           0
+          1,      2.5119,           0,           0,           0,           0
+     2.5119,      6.3096,           0,      7492.3,      815.57,         337
+     6.3096,      15.849,           0,  2.0844e+05,      5170.5,        2180
+     15.849,      39.811,           0,  1.9805e+05,      4570.5,        2001
+     39.811,         100,           0,       79775,      2063.8,        1974
+        100,      251.19,           0,       15200,      435.37,        2064
+     251.19,      630.96,           0,      2189.5,      47.632,        4177
+     630.96,      1584.9,           0,      275.43,      4.9242,        6041
+     1584.9,      3981.1,           0,    0.015334,   0.0090756,           3
+     3981.1,       10000,           0,           0,           0,           0
+      10000,       25119,           0,           0,           0,           0
+      25119,       63096,           0,           0,           0,           0
+      63096,  1.5849e+05,           0,           0,           0,           0
+ 1.5849e+05,  3.9811e+05,           0,           0,           0,           0
+ 3.9811e+05,       1e+06,           0,           0,           0,           0
+      1e+06,  2.5119e+06,           0,           0,           0,           0
+ 2.5119e+06,  6.3096e+06,           0,           0,           0,           0
+ 6.3096e+06,  1.5849e+07,           0,           0,           0,           0
+ 1.5849e+07,  3.9811e+07,           0,           0,           0,           0
+ 3.9811e+07,       1e+08,           0,           0,           0,           0
+      1e+08,  2.5119e+08,           0,           0,           0,           0
+ 2.5119e+08,  6.3096e+08,           0,           0,           0,           0
+ 6.3096e+08,  1.5849e+09,           0,           0,           0,           0
+ 1.5849e+09,  3.9811e+09,           0,           0,           0,           0
+ 3.9811e+09,       1e+10,           0,           0,           0,           0
+      1e+10,  2.5119e+10,           0,           0,           0,           0
+ 2.5119e+10,  6.3096e+10,           0,           0,           0,           0
+ 6.3096e+10,  1.5849e+11,           0,           0,           0,           0
+ 1.5849e+11,  3.9811e+11,           0,           0,           0,           0
+ 3.9811e+11,       1e+12,           0,           0,           0,           0
+'End of Block'
+'*', 9, 0, 4, 0, 4, 4, 1, 6
+'GRAS_DATA_TITLE',   -1,'TOTAL NIEL'
+'GRAS_DATA_TYPE',   -1,'STAT_DOUBLE'
+'GRAS_MODULE_NAME',   -1,'NIEL'
+'GRAS_MODULE_TYPE',   -1,'NIEL'
+'NIEL','MeV/g',    1,'NIEL'
+'Error','MeV/g',    1,'Error NIEL'
+'Entries','',    1,'Number of entries'
+'Non zero entries','',    1,'Number of non zero entries'
+      93202,        1187,       53239,       18234
+'End of Block'
+'*', 32, 1, 24, 0, 6, 6, 50, 5
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'NIEL SPECTRUM'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'NIEL'
+'GRAS_MODULE_TYPE',   -1,'NIEL'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'NIEL_niel'
+'HIST_SUM_ALL_BIN_VALUES',    1, 1.8632e+07, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'NIEL niel spectrum in MeV/g'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'NIEL'
+'X_AXIS_MAX',    1,    1e+05, ' '
+'X_AXIS_MIN',    1,    1e-13, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'MeV/g'
+'Y_AXIS_LABEL',   -1,' '
+'Y_AXIS_UNITS',   -1,'counts/cm2'
+'lower','MeV/g',    1,'Bin lower edge'
+'upper','MeV/g',    1,'Bin upper edge'
+'mean','MeV/g',    1,'Bin mean'
+'value','counts/cm2',    1,'Bin value'
+'error','counts/cm2',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-13,  2.2909e-13,           0,           0,           0,           0
+ 2.2909e-13,  5.2481e-13,           0,           0,           0,           0
+ 5.2481e-13,  1.2023e-12,           0,           0,           0,           0
+ 1.2023e-12,  2.7542e-12,           0,           0,           0,           0
+ 2.7542e-12,  6.3096e-12,           0,           0,           0,           0
+ 6.3096e-12,  1.4454e-11,           0,           0,           0,           0
+ 1.4454e-11,  3.3113e-11,           0,           0,           0,           0
+ 3.3113e-11,  7.5858e-11,           0,           0,           0,           0
+ 7.5858e-11,  1.7378e-10,           0,           0,           0,           0
+ 1.7378e-10,  3.9811e-10,           0,           0,           0,           0
+ 3.9811e-10,  9.1201e-10,           0,           0,           0,           0
+ 9.1201e-10,  2.0893e-09,           0,           0,           0,           0
+ 2.0893e-09,  4.7863e-09,           0,           0,           0,           0
+ 4.7863e-09,  1.0965e-08,           0,           0,           0,           0
+ 1.0965e-08,  2.5119e-08,           0,           0,           0,           0
+ 2.5119e-08,  5.7544e-08,           0,           0,           0,           0
+ 5.7544e-08,  1.3183e-07,           0,           0,           0,           0
+ 1.3183e-07,    3.02e-07,           0,           0,           0,           0
+   3.02e-07,  6.9183e-07,           0,           0,           0,           0
+ 6.9183e-07,  1.5849e-06,           0,      7623.9,        5391,           2
+ 1.5849e-06,  3.6308e-06,           0,       15265,      6965.8,          10
+ 3.6308e-06,  8.3176e-06,           0,       26691,      8896.1,          18
+ 8.3176e-06,  1.9055e-05,           0,       22232,      5965.4,          22
+ 1.9055e-05,  4.3652e-05,           0,      838.72,      497.82,           4
+ 4.3652e-05,      0.0001,           0,           0,           0,           0
+     0.0001,  0.00022909,           0,           0,           0,           0
+ 0.00022909,  0.00052481,           0,           0,           0,           0
+ 0.00052481,   0.0012023,           0,           0,           0,           0
+  0.0012023,   0.0027542,           0,  5.2943e+06,  1.4046e+05,        1816
+  0.0027542,   0.0063096,           0,  1.0008e+07,  2.0391e+05,        2453
+  0.0063096,    0.014454,           0,  2.8959e+06,       69701,        2289
+   0.014454,    0.033113,           0,  2.7319e+05,      9508.6,        1430
+   0.033113,    0.075858,           0,       62874,      2253.8,        1362
+   0.075858,     0.17378,           0,       17963,      621.06,        1409
+    0.17378,     0.39811,           0,      4545.7,      160.16,        1458
+    0.39811,     0.91201,           0,      1641.5,      56.572,        1496
+    0.91201,      2.0893,           0,      785.14,      25.637,        1647
+     2.0893,      4.7863,           0,      447.82,      13.057,        2157
+     4.7863,      10.965,           0,        76.3,      3.9035,         652
+     10.965,      25.119,           0,       0.855,     0.33421,           9
+     25.119,      57.544,           0,           0,           0,           0
+     57.544,      131.83,           0,           0,           0,           0
+     131.83,         302,           0,           0,           0,           0
+        302,      691.83,           0,           0,           0,           0
+     691.83,      1584.9,           0,           0,           0,           0
+     1584.9,      3630.8,           0,           0,           0,           0
+     3630.8,      8317.6,           0,           0,           0,           0
+     8317.6,       19055,           0,           0,           0,           0
+      19055,       43652,           0,           0,           0,           0
+      43652,       1e+05,           0,           0,           0,           0
+'End of Block'
+'*', 10, 0, 5, 0, 4, 4, 4, 4
+'GRAS_DATA_TITLE',   -1,'TOTAL NON IONISING DOSE PER PARTICLE SPECIES'
+'GRAS_DATA_TYPE',   -1,'STAT_DOUBLE'
+'GRAS_MODULE_NAME',   -1,'NIEL'
+'GRAS_MODULE_TYPE',   -1,'NIEL'
+'PARTICLE SPECIES',   -4,'e+','e-','neutron','proton'
+'NIEL','MeV/g',    1,'NIEL'
+'Error','MeV/g',    1,'Error NIEL'
+'Entries','',    1,'Number of entries'
+'Non zero entries','',    1,'Number of non zero entries'
+          0,           0,       53239,           0
+          0,           0,       53239,          62
+          0,           0,       53239,           0
+          0,           0,       53239,       18178
+'End of Block'
+'*', 32, 1, 24, 0, 6, 6, 50, 3
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'DOSE SPECTRUM'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'TID'
+'GRAS_MODULE_TYPE',   -1,'DOSE'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'TID_dose'
+'HIST_SUM_ALL_BIN_VALUES',    1, 1.9666e+07, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'TID dose spectrum in rad'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'Dose'
+'X_AXIS_MAX',    1,    1e+08, ' '
+'X_AXIS_MIN',    1,    1e-11, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'rad'
+'Y_AXIS_LABEL',   -1,' '
+'Y_AXIS_UNITS',   -1,'counts/cm2'
+'lower','rad',    1,'Bin lower edge'
+'upper','rad',    1,'Bin upper edge'
+'mean','rad',    1,'Bin mean'
+'value','counts/cm2',    1,'Bin value'
+'error','counts/cm2',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-11,  2.3988e-11,           0,    0.093305,    0.050869,           5
+ 2.3988e-11,  5.7544e-11,           0,     0.19523,     0.19523,           1
+ 5.7544e-11,  1.3804e-10,           0,     0.40164,     0.15911,           8
+ 1.3804e-10,  3.3113e-10,           0,      2.6207,      1.3647,          17
+ 3.3113e-10,  7.9433e-10,           0,      67.413,      61.876,          27
+ 7.9433e-10,  1.9055e-09,           0,      645.71,      379.38,          53
+ 1.9055e-09,  4.5709e-09,           0,      931.29,      820.77,          68
+ 4.5709e-09,  1.0965e-08,           0,       13894,      2833.7,         613
+ 1.0965e-08,  2.6303e-08,           0,       46359,      4091.1,         951
+ 2.6303e-08,  6.3096e-08,           0,       98572,       10316,        1103
+ 6.3096e-08,  1.5136e-07,           0,  2.6682e+05,       20912,        1344
+ 1.5136e-07,  3.6308e-07,           0,  6.2396e+05,       37366,        1424
+ 3.6308e-07,  8.7096e-07,           0,   1.159e+06,       59701,        1634
+ 8.7096e-07,  2.0893e-06,           0,  3.1977e+06,  1.0049e+05,        2430
+ 2.0893e-06,  5.0119e-06,           0,  6.3108e+06,   1.495e+05,        2924
+ 5.0119e-06,  1.2023e-05,           0,  5.0919e+06,  1.0361e+05,        2900
+ 1.2023e-05,   2.884e-05,           0,  2.2312e+06,       48014,        2410
+  2.884e-05,  6.9183e-05,           0,  5.9063e+05,       22830,         829
+ 6.9183e-05,  0.00016596,           0,       33704,        8079,          24
+ 0.00016596,  0.00039811,           0,           0,           0,           0
+ 0.00039811,  0.00095499,           0,           0,           0,           0
+ 0.00095499,   0.0022909,           0,           0,           0,           0
+  0.0022909,   0.0054954,           0,           0,           0,           0
+  0.0054954,    0.013183,           0,           0,           0,           0
+   0.013183,    0.031623,           0,           0,           0,           0
+   0.031623,    0.075858,           0,           0,           0,           0
+   0.075858,     0.18197,           0,           0,           0,           0
+    0.18197,     0.43652,           0,           0,           0,           0
+    0.43652,      1.0471,           0,           0,           0,           0
+     1.0471,      2.5119,           0,           0,           0,           0
+     2.5119,      6.0256,           0,           0,           0,           0
+     6.0256,      14.454,           0,           0,           0,           0
+     14.454,      34.674,           0,           0,           0,           0
+     34.674,      83.176,           0,           0,           0,           0
+     83.176,      199.53,           0,           0,           0,           0
+     199.53,      478.63,           0,           0,           0,           0
+     478.63,      1148.2,           0,           0,           0,           0
+     1148.2,      2754.2,           0,           0,           0,           0
+     2754.2,      6606.9,           0,           0,           0,           0
+     6606.9,       15849,           0,           0,           0,           0
+      15849,       38019,           0,           0,           0,           0
+      38019,       91201,           0,           0,           0,           0
+      91201,  2.1878e+05,           0,           0,           0,           0
+ 2.1878e+05,  5.2481e+05,           0,           0,           0,           0
+ 5.2481e+05,  1.2589e+06,           0,           0,           0,           0
+ 1.2589e+06,    3.02e+06,           0,           0,           0,           0
+   3.02e+06,  7.2444e+06,           0,           0,           0,           0
+ 7.2444e+06,  1.7378e+07,           0,           0,           0,           0
+ 1.7378e+07,  4.1687e+07,           0,           0,           0,           0
+ 4.1687e+07,       1e+08,           0,           0,           0,           0
+'End of Block'
+'*', 9, 0, 4, 0, 4, 4, 1, 2
+'GRAS_DATA_TITLE',   -1,'TOTAL DOSE'
+'GRAS_DATA_TYPE',   -1,'STAT_DOUBLE'
+'GRAS_MODULE_NAME',   -1,'TID'
+'GRAS_MODULE_TYPE',   -1,'DOSE'
+'Dose','rad',    1,'Dose/energy deposition'
+'Error','rad',    1,'Error dose/energy deposition'
+'Entries','',    1,'Number of entries'
+'Non zero entries','',    1,'Number of non zero entries'
+     3.4173,    0.059293,       53239,       18845
+'End of Block'
+'*', 32, 1, 24, 0, 6, 6, 50, 1
+'GRAS HISTOGRAM 1D'
+'GRAS_DATA_TITLE',   -1,'TOTAL DOSE VS PRIMARY KINETIC ENERGY'
+'GRAS_DATA_TYPE',   -1,'HIST_1D'
+'GRAS_MODULE_NAME',   -1,'TID'
+'GRAS_MODULE_TYPE',   -1,'DOSE'
+'HIST_ENTRIES',    1,        0, 'none'
+'HIST_NAME',   -1,'TID_total_dose_vs_primary_kine'
+'HIST_SUM_ALL_BIN_VALUES',    1,   3.4173, 'Y_AXIS_UNITS'
+'HIST_TITLE',   -1,'TID total dose VS primary kinetic energy'
+'OVERFLOW_ENTRIES',    1,     0, 'none'
+'OVERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'OVERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_ENTRIES',    1,     0, 'none'
+'UNDERFLOW_ERROR',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_MEAN',    1,        0, 'Y_AXIS_UNITS'
+'UNDERFLOW_VALUE',    1,        0, 'Y_AXIS_UNITS'
+'X_AXIS_LABEL',   -1,'Kinetic energy'
+'X_AXIS_MAX',    1,    1e+08, ' '
+'X_AXIS_MIN',    1,    1e-08, ' '
+'X_AXIS_NBINS',    1,    50, ' '
+'X_AXIS_SCALE',   -1,'log'
+'X_AXIS_UNITS',   -1,'MeV'
+'Y_AXIS_LABEL',   -1,'Dose'
+'Y_AXIS_UNITS',   -1,'rad'
+'lower','MeV',    1,'Bin lower edge'
+'upper','MeV',    1,'Bin upper edge'
+'mean','MeV',    1,'Bin mean'
+'value','rad',    1,'Bin value'
+'error','rad',    1,'Bin error'
+'entries','',    1,'Bin entries'
+      1e-08,  2.0893e-08,           0,           0,           0,           0
+ 2.0893e-08,  4.3652e-08,           0,           0,           0,           0
+ 4.3652e-08,  9.1201e-08,           0,           0,           0,           0
+ 9.1201e-08,  1.9055e-07,           0,           0,           0,           0
+ 1.9055e-07,  3.9811e-07,           0,           0,           0,           0
+ 3.9811e-07,  8.3176e-07,           0,           0,           0,           0
+ 8.3176e-07,  1.7378e-06,           0,           0,           0,           0
+ 1.7378e-06,  3.6308e-06,           0,           0,           0,           0
+ 3.6308e-06,  7.5858e-06,           0,           0,           0,           0
+ 7.5858e-06,  1.5849e-05,           0,           0,           0,           0
+ 1.5849e-05,  3.3113e-05,           0,           0,           0,           0
+ 3.3113e-05,  6.9183e-05,           0,           0,           0,           0
+ 6.9183e-05,  0.00014454,           0,           0,           0,           0
+ 0.00014454,    0.000302,           0,           0,           0,           0
+   0.000302,  0.00063096,           0,           0,           0,           0
+ 0.00063096,   0.0013183,           0,           0,           0,           0
+  0.0013183,   0.0027542,           0,           0,           0,           0
+  0.0027542,   0.0057544,           0,           0,           0,           0
+  0.0057544,    0.012023,           0,           0,           0,           0
+   0.012023,    0.025119,           0,           0,           0,           0
+   0.025119,    0.052481,           0,           0,           0,           0
+   0.052481,     0.10965,           0,           0,           0,           0
+    0.10965,     0.22909,           0,           0,           0,           0
+    0.22909,     0.47863,           0,           0,           0,           0
+    0.47863,           1,           0,           0,           0,           0
+          1,      2.0893,           0,           0,           0,           0
+     2.0893,      4.3652,           0,           0,           0,           0
+     4.3652,      9.1201,           0,           0,           0,           0
+     9.1201,      19.055,           0,           0,           0,           0
+     19.055,      39.811,           0,     0.83539,    0.012482,        5025
+     39.811,      83.176,           0,      1.7361,    0.017883,        9751
+     83.176,      173.78,           0,     0.69412,    0.014527,        2310
+     173.78,      363.08,           0,     0.15037,   0.0045036,        1489
+     363.08,      758.58,           0,   0.0012407,  8.9395e-05,         199
+     758.58,      1584.9,           0,           0,           0,           0
+     1584.9,      3311.3,           0,           0,           0,           0
+     3311.3,      6918.3,           0,           0,           0,           0
+     6918.3,       14454,           0,           0,           0,           0
+      14454,       30200,           0,           0,           0,           0
+      30200,       63096,           0,           0,           0,           0
+      63096,  1.3183e+05,           0,           0,           0,           0
+ 1.3183e+05,  2.7542e+05,           0,           0,           0,           0
+ 2.7542e+05,  5.7544e+05,           0,           0,           0,           0
+ 5.7544e+05,  1.2023e+06,           0,           0,           0,           0
+ 1.2023e+06,  2.5119e+06,           0,           0,           0,           0
+ 2.5119e+06,  5.2481e+06,           0,           0,           0,           0
+ 5.2481e+06,  1.0965e+07,           0,           0,           0,           0
+ 1.0965e+07,  2.2909e+07,           0,           0,           0,           0
+ 2.2909e+07,  4.7863e+07,           0,           0,           0,           0
+ 4.7863e+07,       1e+08,           0,           0,           0,           0
+'End of Block'
+'*', 12, 0, 2, 0, 9, 9, 1, 0
+'GRAS_MODULE_NAME',   -1,'general'
+'GRAS_MODULE_TYPE',   -1,'COMMON'
+'NumOfEvt','',    1,'Number of events'
+'Gamma','',    1,'Average number of gammas'
+'ErrorGamma','',    1,'Error on number of gammas'
+'Electron','',    1,'Average number of electrons'
+'ErrorElectron','',    1,'Error on number of electrons'
+'Positron','',    1,'Average number of positrons'
+'ErrorPositron','',    1,'Error on number of positrons'
+'Steps','',    1,'Average number of steps'
+'ErrorSteps','',    1,'Error on number of steps'
+      60000, 6.9603e+252,  4.873e+199, 4.9527e+223, 3.0856e+175, 3.0147e+161, 4.1662e+151,  6.8995e-72, 7.1036e+159
+'End of Block'
+'End of File'
