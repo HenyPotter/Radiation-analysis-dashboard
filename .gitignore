@@ -8,3 +8,4 @@ v3/generated-data/*.csv
 **/.DS_Store
 v3/classes/__pycache__/*
 v3/__pycache__/*
+v3/classes/__pycache__/
