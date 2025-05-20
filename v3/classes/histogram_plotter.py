@@ -159,3 +159,4 @@ class HistogramPlotter:
                 self.plot_page()
         elif event.key == 'escape':
             plt.close(self.fig)
+            
