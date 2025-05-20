@@ -9,3 +9,4 @@ v3/generated-data/*.csv
 v3/classes/__pycache__/*
 v3/__pycache__/*
 v3/classes/__pycache__/
+v3/generated-data/properties.json
