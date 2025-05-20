@@ -3,12 +3,12 @@ import re
 import glob
 
 output_dir = "data"
+data_file = "trapped_electron_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-VT1-LCC3-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv"
 os.makedirs(output_dir, exist_ok=True)
 
 for filepath in glob.glob(os.path.join(output_dir, "*.csv")):
     os.remove(filepath)
 
-data_file = "solar_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-NA1-FP011-FP10telo001-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv"
 with open(data_file) as f:
     blocks = f.read().split("'End of Block'")
 
@@ -23,5 +23,5 @@ for i, block in enumerate(blocks, start=1):
     else:
         title = f"block_{i}"
 
-    with open(os.path.join(output_dir, f"{title}.csv"), "w") as out:
+    with open(os.path.join(output_dir, f"{title.lower()}.csv"), "w") as out:
         out.write(block)
