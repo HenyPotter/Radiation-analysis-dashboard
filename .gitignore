@@ -2,4 +2,6 @@
 /v1
 /v2
 /v3/data
-/v3/*.csv
+v3/*.csv
+v3/generated-data/*.csv
+*.csv
