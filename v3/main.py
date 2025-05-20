@@ -1,54 +1,8 @@
-from gras_splitter import GrasBlockSplitter
-from histogram_plotter import HistogramPlotter, scan_files  # Přidán import scan_files
+from classes.gras_splitter import GrasBlockSplitter
+from classes.histogram_plotter import HistogramPlotter, scan_files  # Přidán import scan_files
+from classes.file_name_parser import FilenameParser
 import os
 import json
-
-class FilenameParser:
-    def __init__(self, folder='imported-data'):
-        self.folder = folder
-
-    def parse_filename(self, filename):
-        base = filename[:-4] if filename.endswith('.csv') else filename
-        parts = base.split('_')
-
-        if len(parts) < 10:
-            raise ValueError(f"Název souboru '{filename}' nemá očekávaný formát (má {len(parts)} částí).")
-
-        particle_type = parts[0]
-        instrument = parts[1]
-        model = parts[2]
-        version_1 = parts[3]
-        version_2 = parts[4]
-        unit = parts[5]
-        material = parts[7]
-        spectrum = parts[9]
-
-        return {
-            "file_name": filename,
-            "type": particle_type,
-            "particle": instrument,
-            "model": model,
-            "version_1": version_1,
-            "version_2": version_2,
-            "unit": unit,
-            "material": material,
-            "spectrum": spectrum
-        }
-
-    def process_all_files(self, output_filename='imported-data/parsed_filenames.json'):
-        all_parsed = []
-        for filename in os.listdir(self.folder):
-            if filename.endswith('.csv'):
-                try:
-                    parsed = self.parse_filename(filename)
-                    all_parsed.append(parsed)
-                except Exception as e:
-                    print(f"Chyba u souboru '{filename}': {e}")
-
-        # Ulož vše do jednoho JSON souboru
-        with open(output_filename, 'w', encoding='utf-8') as f:
-            json.dump(all_parsed, f, indent=4)
-        print(f"Všechny záznamy uloženy do {output_filename}")
 
 def main():
     # Spusť část pro rozdělení CSV souborů

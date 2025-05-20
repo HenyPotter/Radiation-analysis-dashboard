@@ -7,3 +7,4 @@ v3/generated-data/*.csv
 *.csv
 **/.DS_Store
 v3/__pycache__/*
+v3/classes/__pycache__/
