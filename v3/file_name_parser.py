@@ -1,5 +1,3 @@
-from gras_splitter import GrasBlockSplitter
-from histogram_plotter import HistogramPlotter, scan_files  # Přidán import scan_files
 import os
 import json
 
@@ -20,53 +18,39 @@ class FilenameParser:
         version_1 = parts[3]
         version_2 = parts[4]
         unit = parts[5]
-        material = parts[7]
+        code = parts[6]
+        detector_type = parts[7]
+        material = parts[8]
         spectrum = parts[9]
 
         return {
             "file_name": filename,
-            "type": particle_type,
-            "particle": instrument,
+            "particle_type": particle_type,
+            "instrument": instrument,
             "model": model,
             "version_1": version_1,
             "version_2": version_2,
             "unit": unit,
+            "code": code,
+            "detector_type": detector_type,
             "material": material,
             "spectrum": spectrum
         }
 
-    def process_all_files(self, output_filename='imported-data/parsed_filenames.json'):
-        all_parsed = []
+    def process_all_files(self):
         for filename in os.listdir(self.folder):
             if filename.endswith('.csv'):
                 try:
                     parsed = self.parse_filename(filename)
-                    all_parsed.append(parsed)
+                    json_filename = filename.replace('.csv', '.json')
+                    output_path = os.path.join(self.folder, json_filename)
+                    with open(output_path, 'w', encoding='utf-8') as f:
+                        json.dump(parsed, f, indent=4)
+                    print(f"Zpracováno: {filename} -> {json_filename}")
                 except Exception as e:
                     print(f"Chyba u souboru '{filename}': {e}")
 
-        # Ulož vše do jednoho JSON souboru
-        with open(output_filename, 'w', encoding='utf-8') as f:
-            json.dump(all_parsed, f, indent=4)
-        print(f"Všechny záznamy uloženy do {output_filename}")
-
 def main():
-    # Spusť část pro rozdělení CSV souborů
-    splitter = GrasBlockSplitter()
-    splitter.run()
-
-    # Poté načti histogramové soubory a vykresli je
-    print("\nScanning for matching CSV files...")
-    files = scan_files()
-    if not files:
-        print("No matching files found with 'GRAS_DATA_TYPE',   -1,'HIST_1D'.")
-        return
-
-    pager = HistogramPlotter(files, per_page=2)
-    pager.plot_page()
-
-    # Nakonec spusť parser názvů CSV souborů a ulož vše do jednoho JSON
-    print("\nParsing filenames and creating single JSON file...")
     parser = FilenameParser()
     parser.process_all_files()
 

@@ -1,0 +1,101 @@
+[
+    {
+        "file_name": "trapped_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-NA1-FP011-FP10telo001-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "trapped",
+        "particle": "proton",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-NA1-FP011-FP10telo001-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "trapped_electron_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-U1-AD585-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "trapped",
+        "particle": "electron",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-U1-AD585-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "solar_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-NA1-FP011-FP10telo001-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "solar",
+        "particle": "proton",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-NA1-FP011-FP10telo001-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "trapped_electron_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-VT1-LCC3-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "trapped",
+        "particle": "electron",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-VT1-LCC3-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "trapped_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-VT1-LCC3-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "trapped",
+        "particle": "proton",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-VT1-LCC3-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "solar_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-U1-AD585-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "solar",
+        "particle": "proton",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-U1-AD585-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "trapped_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-U1-AD585-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "trapped",
+        "particle": "proton",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-U1-AD585-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "trapped_electron_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-NA1-FP011-FP10telo001-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "trapped",
+        "particle": "electron",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-NA1-FP011-FP10telo001-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    },
+    {
+        "file_name": "solar_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-VT1-LCC3-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv",
+        "type": "solar",
+        "particle": "proton",
+        "model": "TPS",
+        "version_1": "BDS-CISHAB-MDL-0002-ELV214",
+        "version_2": "v007-ELV214",
+        "unit": "v6-VT1-LCC3-DETECTOR",
+        "material": "Silicon",
+        "spectrum": "Spectrum1"
+    }
+]
