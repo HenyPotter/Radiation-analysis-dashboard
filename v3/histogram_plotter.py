@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-
 def scan_files(root='generated-data'):
     matched_files = []
     for subdir, dirs, files in os.walk(root):
@@ -27,50 +26,32 @@ def extract_data(csv_file):
                 break
             line_content = line.lstrip("'").strip()
             if line_content.startswith('X_AXIS_SCALE'):
-                parts = line_content.split(',')
-                if len(parts) >= 3:
-                    metadata['x_axis_scale'] = parts[2].strip().strip("'\"")
+                metadata['x_axis_scale'] = line_content.split(',')[2].strip().strip("'\"")
             elif line_content.startswith('X_AXIS_UNITS'):
-                parts = line_content.split(',')
-                if len(parts) >= 3:
-                    metadata['x_axis_units'] = parts[2].strip().strip("'\"")
+                metadata['x_axis_units'] = line_content.split(',')[2].strip().strip("'\"")
             elif line_content.startswith('Y_AXIS_UNITS'):
-                parts = line_content.split(',')
-                if len(parts) >= 3:
-                    metadata['y_axis_units'] = parts[2].strip().strip("'\"")
+                metadata['y_axis_units'] = line_content.split(',')[2].strip().strip("'\"")
             elif line_content.startswith('X_AXIS_LABEL'):
-                parts = line_content.split(',')
-                if len(parts) >= 3:
-                    metadata['x_axis_label'] = parts[2].strip().strip("'\"")
+                metadata['x_axis_label'] = line_content.split(',')[2].strip().strip("'\"")
             elif line_content.startswith('Y_AXIS_LABEL'):
-                parts = line_content.split(',')
-                if len(parts) >= 3:
-                    metadata['y_axis_label'] = parts[2].strip().strip("'\"")
+                metadata['y_axis_label'] = line_content.split(',')[2].strip().strip("'\"")
             elif line_content.startswith('HIST_TITLE'):
-                parts = line_content.split(',')
-                if len(parts) >= 3:
-                    metadata['title'] = parts[2].strip().strip("'\"")
+                metadata['title'] = line_content.split(',')[2].strip().strip("'\"")
 
     xlabel = metadata.get('x_axis_label', 'Not found')
     ylabel = metadata.get('y_axis_label', 'Not found')
     title = metadata.get('title', 'Not found')
-    xunits = metadata.get('x_axis_units', 'Not found')
-    yunits = metadata.get('y_axis_units', 'Not found')
+    xunits = metadata.get('x_axis_units', '')
+    yunits = metadata.get('y_axis_units', '')
     xscale = metadata.get('x_axis_scale', 'linear')
 
     if xunits:
-        xlabel = f"{xlabel} [{xunits}]"
+        xlabel += f" [{xunits}]"
     if yunits:
-        ylabel = f"{ylabel} [{yunits}]"
+        ylabel += f" [{yunits}]"
 
     column_names = ['lower', 'upper', 'mean', 'value', 'error', 'entries']
-
-    df = pd.read_csv(
-        csv_file,
-        comment="'",
-        header=None,
-        names=column_names
-    ).astype(float)
+    df = pd.read_csv(csv_file, comment="'", header=None, names=column_names).astype(float)
 
     bin_lower = df['lower'].values
     bin_upper = df['upper'].values
@@ -92,7 +73,7 @@ def extract_data(csv_file):
         'folder_name': os.path.basename(os.path.dirname(csv_file))
     }
 
-class GraphPager:
+class HistogramPlotter:
     def __init__(self, files, per_page=3):
         self.files = files
         self.per_page = per_page
@@ -107,10 +88,10 @@ class GraphPager:
         batch = self.files[start:end]
 
         if self.fig:
-            plt.close(self.fig) 
+            plt.close(self.fig)
 
         rows = self.per_page
-        self.fig, self.axes = plt.subplots(rows, 1, figsize=(12, 5*rows))
+        self.fig, self.axes = plt.subplots(rows, 1, figsize=(12, 5 * rows))
         if rows == 1:
             self.axes = [self.axes]
 
@@ -147,11 +128,8 @@ class GraphPager:
             ax.set_title(
                 f"{data['title']}\n{data['folder_name'].replace('_', ' ').capitalize()} - ({data['file_name']})"
             )
-            
+
             ax.set_xlim(data['bin_lower'].min(), data['bin_upper'].max())
-            
-            
- 
             ax.grid(True, which='both', linestyle='--', linewidth=0.5, alpha=0.7)
             ax.legend()
 
@@ -161,12 +139,11 @@ class GraphPager:
         self.fig.suptitle(f"Page {self.page + 1} / {self.num_pages}", fontsize=16)
         self.fig.tight_layout(rect=[0, 0, 1, 0.96])
 
-        # Make window maximized/fullscreen here
-        mng = plt.get_current_fig_manager()
         try:
-            mng.window.state('zoomed')  
+            mng = plt.get_current_fig_manager()
+            mng.window.state('zoomed')
         except Exception:
-            mng.full_screen_toggle()  
+            mng.full_screen_toggle()
 
         self.fig.canvas.mpl_connect('key_press_event', self.on_key)
         plt.show()
@@ -182,16 +159,3 @@ class GraphPager:
                 self.plot_page()
         elif event.key == 'escape':
             plt.close(self.fig)
-
-def main():
-    print("Scanning for matching CSV files...")
-    files = scan_files()
-    if not files:
-        print("No matching files found with 'GRAS_DATA_TYPE',   -1,'HIST_1D'.")
-        return
-
-    pager = GraphPager(files, per_page=2) 
-    pager.plot_page()
-
-if __name__ == "__main__":
-    main()
