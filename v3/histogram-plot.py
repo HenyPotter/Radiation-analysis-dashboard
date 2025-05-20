@@ -144,14 +144,21 @@ class GraphPager:
             ax.set_xscale(data['xscale'])
             ax.set_xlabel(data['xlabel'])
             ax.set_ylabel(data['ylabel'])
-            ax.set_title(f"{data['title']} ({data['file_name']})")
+            ax.set_title(
+                f"{data['title']}\n{data['folder_name'].replace('_', ' ').capitalize()} - ({data['file_name']})"
+            )
+            
+            ax.set_xlim(data['bin_lower'].min(), data['bin_upper'].max())
+            
+            
+ 
             ax.grid(True, which='both', linestyle='--', linewidth=0.5, alpha=0.7)
             ax.legend()
 
         for i in range(len(batch), self.per_page):
             self.axes[i].set_visible(False)
 
-        self.fig.suptitle(f"Page {self.page + 1} / {self.num_pages} — Use Left/Right arrows to navigate, Esc to quit")
+        self.fig.suptitle(f"Page {self.page + 1} / {self.num_pages}", fontsize=16)
         self.fig.tight_layout(rect=[0, 0, 1, 0.96])
 
         # Make window maximized/fullscreen here
