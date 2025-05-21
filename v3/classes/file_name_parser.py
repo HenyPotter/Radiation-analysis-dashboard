@@ -1,58 +1,56 @@
 import os
 import json
+import re
 
-class FilenameParser:
-    def __init__(self, folder='imported-data'):
-        self.folder = folder
-        # Create folder if it doesn't exist
-        if not os.path.exists(self.folder):
-            print(f"Folder '{self.folder}' does not exist. Creating it now...")
-            os.makedirs(self.folder)
+class CsvPropertiesCollector:
+    def __init__(self, root_folder='generated-data', output_file='properties.json'):
+        self.root_folder = root_folder
+        self.output_file = output_file
+        self.key_value_pattern = re.compile(r"'([^']+)',\s*-?\d+,\s*'([^']*)'")
 
-    def parse_filename(self, filename):
-        base = filename[:-4] if filename.endswith('.csv') else filename
-        parts = base.split('_')
+    def parse_csv_headers(self, filepath):
+        properties = {}
 
-        if len(parts) < 10:
-            raise ValueError(f"Název souboru '{filename}' nemá očekávaný formát (má {len(parts)} částí).")
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                for line in f:
+                    match = self.key_value_pattern.search(line)
+                    if match:
+                        key, value = match.group(1), match.group(2)
+                        properties[key] = value
+        except Exception as e:
+            print(f"Error reading {filepath}: {e}")
 
-        return {
-            "file_name": filename,
-            "particle_type": parts[0],
-            "instrument": parts[1],
-            "model": parts[2],
-            "thing_1": parts[3],
-            "thing_2": parts[4],
-            "thing_3": parts[5],
-            "material": parts[7],
-            "spectrum": parts[9]
-        }
+        return properties
 
-    def process_all_files(self):
-        print(f"Looking for CSV files in folder: '{self.folder}'")
-        all_parsed = []
+    def collect_properties(self):
+        all_properties = []
 
-        for filename in os.listdir(self.folder):
-            if filename.endswith('.csv'):
-                print(f"Processing file: {filename}")
-                try:
-                    parsed = self.parse_filename(filename)
-                    all_parsed.append(parsed)
-                except Exception as e:
-                    print(f"Error processing '{filename}': {e}")
+        for dirpath, dirnames, filenames in os.walk(self.root_folder):
+            for filename in filenames:
+                if filename.endswith('.csv'):
+                    full_path = os.path.join(dirpath, filename)
+                    
+                    relative_folder = os.path.relpath(dirpath, self.root_folder)
+                    if relative_folder == '.':
+                        relative_folder = ''
 
-        if all_parsed:
-            output_path = os.path.join('generated-data', 'properties.json')
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(all_parsed, f, indent=4, ensure_ascii=False)
-            print(f"\nCreated combined JSON file with {len(all_parsed)} entries: {output_path}")
-        else:
-            print("No valid CSV files processed, no JSON file created.")
+                    file_name_without_ext = filename[:-4]
 
-def main():
-    parser = FilenameParser()
-    parser.process_all_files()
+                    csv_props = self.parse_csv_headers(full_path)
 
-if __name__ == "__main__":
-    main()
-    
+                    # Ukládat jen pokud v csv_props je HIST_TITLE
+                    if "HIST_TITLE" in csv_props:
+                        properties = {
+                            "folder": relative_folder,
+                            "file_name": file_name_without_ext,
+                            "plot_title": relative_folder + "_" + file_name_without_ext + ".png",
+                        }
+                        properties.update(csv_props)
+                        all_properties.append(properties)
+
+        with open(self.output_file, 'w', encoding='utf-8') as f:
+            json.dump(all_properties, f, indent=4, ensure_ascii=False)
+
+        print(f"Collected properties for {len(all_properties)} CSV files with 'HIST_TITLE'.")
+        print(f"Saved to '{self.output_file}'")
