@@ -44,7 +44,7 @@ class CsvPropertiesCollector:
                         properties = {
                             "folder": relative_folder,
                             "file_name": file_name_without_ext,
-                            "plot_title": relative_folder + "_" + file_name_without_ext + ".png",
+                            "plot_title": "output_plots/" + relative_folder + "_" + file_name_without_ext + ".png",
                         }
                         properties.update(csv_props)
                         all_properties.append(properties)

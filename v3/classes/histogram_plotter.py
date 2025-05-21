@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from tqdm import tqdm
+
 
 def scan_files(root='generated-data'):
     matched_files = []
@@ -80,11 +82,11 @@ class HistogramPlotter:
         os.makedirs(output_dir, exist_ok=True)
 
     def plot_all(self):
-        for idx, file in enumerate(self.files):
+        for file in tqdm(self.files, desc="Generating plots", unit="file"):
             try:
                 data = extract_data(file)
             except Exception as e:
-                print(f"❌ Failed to process {file}: {e}")
+                tqdm.write(f"❌ Failed to process {file}: {e}")
                 continue
 
             fig, ax = plt.subplots(figsize=(12, 5))
@@ -121,7 +123,6 @@ class HistogramPlotter:
 
             fig.tight_layout()
 
-            # Construct output file name: folder_file_name.png
             file_stem = data['file_name'].replace('.csv', '')
             folder = data['folder_name']
             output_filename = f"{folder}_{file_stem}.png"
@@ -129,5 +130,3 @@ class HistogramPlotter:
 
             fig.savefig(output_path, dpi=300)
             plt.close(fig)
-
-            print(f"✅ Saved: {output_path}")

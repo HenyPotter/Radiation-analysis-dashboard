@@ -2,7 +2,7 @@
     {
         "folder": "solar_proton",
         "file_name": "e-_fluence_spectrum",
-        "plot_title": "solar_proton_e-_fluence_spectrum.png",
+        "plot_title": "output_plots/solar_proton_e-_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "E- FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -21,7 +21,7 @@
     {
         "folder": "solar_proton",
         "file_name": "proton_fluence_spectrum",
-        "plot_title": "solar_proton_proton_fluence_spectrum.png",
+        "plot_title": "output_plots/solar_proton_proton_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "PROTON FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -40,7 +40,7 @@
     {
         "folder": "solar_proton",
         "file_name": "gamma_fluence_spectrum",
-        "plot_title": "solar_proton_gamma_fluence_spectrum.png",
+        "plot_title": "output_plots/solar_proton_gamma_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "GAMMA FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -59,7 +59,7 @@
     {
         "folder": "solar_proton",
         "file_name": "niel_spectrum",
-        "plot_title": "solar_proton_niel_spectrum.png",
+        "plot_title": "output_plots/solar_proton_niel_spectrum.png",
         "GRAS_DATA_TITLE": "NIEL SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "NIEL",
@@ -77,7 +77,7 @@
     {
         "folder": "solar_proton",
         "file_name": "dose_spectrum",
-        "plot_title": "solar_proton_dose_spectrum.png",
+        "plot_title": "output_plots/solar_proton_dose_spectrum.png",
         "GRAS_DATA_TITLE": "DOSE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "TID",
@@ -95,7 +95,7 @@
     {
         "folder": "solar_proton",
         "file_name": "let_spectrum",
-        "plot_title": "solar_proton_let_spectrum.png",
+        "plot_title": "output_plots/solar_proton_let_spectrum.png",
         "GRAS_DATA_TITLE": "LET SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "LET",
@@ -113,7 +113,7 @@
     {
         "folder": "solar_proton",
         "file_name": "total_dose_vs_primary_kinetic_energy",
-        "plot_title": "solar_proton_total_dose_vs_primary_kinetic_energy.png",
+        "plot_title": "output_plots/solar_proton_total_dose_vs_primary_kinetic_energy.png",
         "GRAS_DATA_TITLE": "TOTAL DOSE VS PRIMARY KINETIC ENERGY",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "TID",
@@ -131,7 +131,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "e-_fluence_spectrum",
-        "plot_title": "trapped_proton_e-_fluence_spectrum.png",
+        "plot_title": "output_plots/trapped_proton_e-_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "E- FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -150,7 +150,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "proton_fluence_spectrum",
-        "plot_title": "trapped_proton_proton_fluence_spectrum.png",
+        "plot_title": "output_plots/trapped_proton_proton_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "PROTON FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -169,7 +169,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "gamma_fluence_spectrum",
-        "plot_title": "trapped_proton_gamma_fluence_spectrum.png",
+        "plot_title": "output_plots/trapped_proton_gamma_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "GAMMA FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -188,7 +188,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "niel_spectrum",
-        "plot_title": "trapped_proton_niel_spectrum.png",
+        "plot_title": "output_plots/trapped_proton_niel_spectrum.png",
         "GRAS_DATA_TITLE": "NIEL SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "NIEL",
@@ -206,7 +206,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "dose_spectrum",
-        "plot_title": "trapped_proton_dose_spectrum.png",
+        "plot_title": "output_plots/trapped_proton_dose_spectrum.png",
         "GRAS_DATA_TITLE": "DOSE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "TID",
@@ -224,7 +224,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "let_spectrum",
-        "plot_title": "trapped_proton_let_spectrum.png",
+        "plot_title": "output_plots/trapped_proton_let_spectrum.png",
         "GRAS_DATA_TITLE": "LET SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "LET",
@@ -242,7 +242,7 @@
     {
         "folder": "trapped_proton",
         "file_name": "total_dose_vs_primary_kinetic_energy",
-        "plot_title": "trapped_proton_total_dose_vs_primary_kinetic_energy.png",
+        "plot_title": "output_plots/trapped_proton_total_dose_vs_primary_kinetic_energy.png",
         "GRAS_DATA_TITLE": "TOTAL DOSE VS PRIMARY KINETIC ENERGY",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "TID",
@@ -260,7 +260,7 @@
     {
         "folder": "trapped_electron",
         "file_name": "e-_fluence_spectrum",
-        "plot_title": "trapped_electron_e-_fluence_spectrum.png",
+        "plot_title": "output_plots/trapped_electron_e-_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "E- FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -279,7 +279,7 @@
     {
         "folder": "trapped_electron",
         "file_name": "gamma_fluence_spectrum",
-        "plot_title": "trapped_electron_gamma_fluence_spectrum.png",
+        "plot_title": "output_plots/trapped_electron_gamma_fluence_spectrum.png",
         "GRAS_DATA_TITLE": "GAMMA FLUENCE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "FLUENCE",
@@ -298,7 +298,7 @@
     {
         "folder": "trapped_electron",
         "file_name": "niel_spectrum",
-        "plot_title": "trapped_electron_niel_spectrum.png",
+        "plot_title": "output_plots/trapped_electron_niel_spectrum.png",
         "GRAS_DATA_TITLE": "NIEL SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "NIEL",
@@ -316,7 +316,7 @@
     {
         "folder": "trapped_electron",
         "file_name": "dose_spectrum",
-        "plot_title": "trapped_electron_dose_spectrum.png",
+        "plot_title": "output_plots/trapped_electron_dose_spectrum.png",
         "GRAS_DATA_TITLE": "DOSE SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "TID",
@@ -334,7 +334,7 @@
     {
         "folder": "trapped_electron",
         "file_name": "let_spectrum",
-        "plot_title": "trapped_electron_let_spectrum.png",
+        "plot_title": "output_plots/trapped_electron_let_spectrum.png",
         "GRAS_DATA_TITLE": "LET SPECTRUM",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "LET",
@@ -352,7 +352,7 @@
     {
         "folder": "trapped_electron",
         "file_name": "total_dose_vs_primary_kinetic_energy",
-        "plot_title": "trapped_electron_total_dose_vs_primary_kinetic_energy.png",
+        "plot_title": "output_plots/trapped_electron_total_dose_vs_primary_kinetic_energy.png",
         "GRAS_DATA_TITLE": "TOTAL DOSE VS PRIMARY KINETIC ENERGY",
         "GRAS_DATA_TYPE": "HIST_1D",
         "GRAS_MODULE_NAME": "TID",

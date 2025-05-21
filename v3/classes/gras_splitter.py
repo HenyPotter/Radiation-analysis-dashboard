@@ -1,5 +1,3 @@
-# gras_splitter.py
-
 import os
 import re
 import glob
@@ -17,11 +15,11 @@ class GrasBlockSplitter:
         return sorted(glob.glob(f"{self.input_dir}/*.csv"))
 
     def show_menu(self, files):
-        print("Found the following CSV files:\n")
+        print("\033[1;36mFound the following CSV files:\033[0m\n")
         for idx, file in enumerate(files, start=1):
-            print(f"  {idx}) {os.path.basename(file)}")
-        print("\033[1m\nEnter the numbers of the files to process (e.g. 1,2,4) or 'a' for all:\033[0m")
-        return input("Your choice: ").strip()
+            print(f"  \033[93m{idx:2})\033[0m {os.path.basename(file)}")
+        print("\n\033[1;32mEnter the numbers of the files to process (e.g. 1,2,4) or 'a' for all:\033[0m")
+        return input("➤ Your choice: ").strip()
 
     def get_selected_files(self, files, choice):
         if choice.lower() == 'a':
@@ -43,49 +41,49 @@ class GrasBlockSplitter:
         output_dir = os.path.join(self.output_dir, base_folder_name)
         os.makedirs(output_dir, exist_ok=True)
 
-        print(f"\nProcessing '{filename}' → '{output_dir}'")
+        print(f"\n\033[1;34m▶ Processing:\033[0m {filename}")
+        print(f"   \033[1;33m→ Output Directory:\033[0m {output_dir}")
 
         with open(file_path, "r", encoding="utf-8") as f:
             blocks = f.read().split("'End of Block'")
 
+        saved = 0
         for i, block in enumerate(blocks, start=1):
             block = block.strip()
             if not block or block == "'End of File'":
                 continue
 
             title_match = re.search(r"'GRAS_DATA_TITLE'\s*,\s*-1\s*,\s*'([^']+)'", block)
-            if title_match:
-                title = title_match.group(1).replace(" ", "_").replace("/", "_")
-            else:
-                title = f"block_{i}"
-
+            title = title_match.group(1).replace(" ", "_").replace("/", "_") if title_match else f"block_{i}"
             output_path = os.path.join(output_dir, f"{title.lower()}.csv")
+
             with open(output_path, "w", encoding="utf-8") as out:
                 out.write(block)
+            saved += 1
 
-        print(f"Done: {len(blocks)} blocks processed.")
+        print(f"   \033[1;32m✓ {saved} blocks saved.\033[0m")
 
     def run(self):
         self.clear_screen()
-        print("GRAS Block Splitter")
-        print("========================\n")
+        print("\033[1;35mGRAS Block Splitter\033[0m")
 
         csv_files = self.list_csv_files()
         if not csv_files:
-            print(f"No CSV files found in '{self.input_dir}' directory.")
+            print(f"\033[1;31mNo CSV files found in '{self.input_dir}' directory.\033[0m")
             return
 
         user_choice = self.show_menu(csv_files)
         selected_files = self.get_selected_files(csv_files, user_choice)
 
         if not selected_files:
-            print("No valid files selected. Exiting.")
+            print("\n\033[1;31m No valid files selected. Exiting.\033[0m")
             return
 
         shutil.rmtree(self.output_dir, ignore_errors=True)
         os.makedirs(self.output_dir, exist_ok=True)
 
+        print("\n\033[1;36mProcessing selected files...\033[0m")
         for file_path in selected_files:
             self.process_file(file_path)
 
-        print("\nAll selected files processed successfully.")
+        print("\n\033[1;32m✔ All selected files processed successfully.\033[0m\n")
