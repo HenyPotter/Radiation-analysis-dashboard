@@ -74,7 +74,7 @@ class GrasBlockSplitter:
             output_dir = os.path.join(self.output_dir, base_folder_name)
 
             new_files = sorted([
-                f
+                os.path.join(base_folder_name, f)
                 for f in os.listdir(output_dir)
                 if f.endswith(".csv")
             ])
