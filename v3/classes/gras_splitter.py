@@ -2,6 +2,7 @@ import os
 import re
 import glob
 import shutil
+import json
 
 class GrasBlockSplitter:
     def __init__(self, input_dir="imported-data", output_dir="generated-data"):
@@ -63,6 +64,28 @@ class GrasBlockSplitter:
 
         print(f"   \033[1;32m✓ {saved} blocks saved.\033[0m")
 
+    def generate_file_map(self, selected_files):
+        file_map = {}
+
+        for file_path in selected_files:
+            filename = os.path.basename(file_path)
+            parts = filename.split("_")
+            base_folder_name = "_".join(parts[:2]) if len(parts) >= 2 else "output"
+            output_dir = os.path.join(self.output_dir, base_folder_name)
+
+            new_files = sorted([
+                f
+                for f in os.listdir(output_dir)
+                if f.endswith(".csv")
+            ])
+
+            file_map[filename] = new_files
+
+        with open("file_map.json", "w", encoding="utf-8") as f:
+            json.dump(file_map, f, indent=4)
+
+        print("\n\033[1;36m✔ File map saved to 'file_map.json'.\033[0m\n")
+
     def run(self):
         self.clear_screen()
         print("\033[1;35mGRAS Block Splitter\033[0m")
@@ -85,5 +108,7 @@ class GrasBlockSplitter:
         print("\n\033[1;36mProcessing selected files...\033[0m")
         for file_path in selected_files:
             self.process_file(file_path)
+
+        self.generate_file_map(selected_files)
 
         print("\n\033[1;32m✔ All selected files processed successfully.\033[0m\n")
