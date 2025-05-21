@@ -3,6 +3,7 @@ from classes.histogram_plotter import HistogramPlotter, scan_files
 from classes.file_name_parser import CsvPropertiesCollector
 from tqdm import tqdm
 import os
+import time
 import json
 import re
 
@@ -32,7 +33,7 @@ def main():
     print("\n📝 Extracting CSV header properties and saving to JSON...")
     collector = CsvPropertiesCollector(root_folder='generated-data', output_file='properties.json')
     collector.collect_properties()
-
+    time.sleep(1)
     clear_screen()
     print("\n✅ All tasks completed successfully.")
 
