@@ -74,33 +74,20 @@ def extract_data(csv_file):
     }
 
 class HistogramPlotter:
-    def __init__(self, files, per_page=3):
+    def __init__(self, files, output_dir='plots'):
         self.files = files
-        self.per_page = per_page
-        self.page = 0
-        self.num_pages = (len(files) + per_page - 1) // per_page
-        self.fig = None
-        self.axes = None
+        self.output_dir = output_dir
+        os.makedirs(output_dir, exist_ok=True)
 
-    def plot_page(self):
-        start = self.page * self.per_page
-        end = min(start + self.per_page, len(self.files))
-        batch = self.files[start:end]
+    def plot_all(self):
+        for idx, file in enumerate(self.files):
+            try:
+                data = extract_data(file)
+            except Exception as e:
+                print(f"❌ Failed to process {file}: {e}")
+                continue
 
-        if self.fig:
-            plt.close(self.fig)
-
-        rows = self.per_page
-        self.fig, self.axes = plt.subplots(rows, 1, figsize=(12, 5 * rows))
-        if rows == 1:
-            self.axes = [self.axes]
-
-        for ax in self.axes:
-            ax.clear()
-
-        for i, file in enumerate(batch):
-            data = extract_data(file)
-            ax = self.axes[i]
+            fig, ax = plt.subplots(figsize=(12, 5))
 
             ax.bar(data['bin_lower'], data['dose'],
                    width=(data['bin_upper'] - data['bin_lower']),
@@ -128,35 +115,19 @@ class HistogramPlotter:
             ax.set_title(
                 f"{data['title']}\n{data['folder_name'].replace('_', ' ').capitalize()} - ({data['file_name']})"
             )
-
             ax.set_xlim(data['bin_lower'].min(), data['bin_upper'].max())
             ax.grid(True, which='both', linestyle='--', linewidth=0.5, alpha=0.7)
             ax.legend()
 
-        for i in range(len(batch), self.per_page):
-            self.axes[i].set_visible(False)
+            fig.tight_layout()
 
-        self.fig.suptitle(f"Page {self.page + 1} / {self.num_pages}", fontsize=16)
-        self.fig.tight_layout(rect=[0, 0, 1, 0.96])
+            # Construct output file name: folder_file_name.png
+            file_stem = data['file_name'].replace('.csv', '')
+            folder = data['folder_name']
+            output_filename = f"{folder}_{file_stem}.png"
+            output_path = os.path.join(self.output_dir, output_filename)
 
-        try:
-            mng = plt.get_current_fig_manager()
-            mng.window.state('zoomed')
-        except Exception:
-            mng.full_screen_toggle()
+            fig.savefig(output_path, dpi=300)
+            plt.close(fig)
 
-        self.fig.canvas.mpl_connect('key_press_event', self.on_key)
-        plt.show()
-
-    def on_key(self, event):
-        if event.key == 'right' or event.key == ' ':
-            if self.page < self.num_pages - 1:
-                self.page += 1
-                self.plot_page()
-        elif event.key == 'left':
-            if self.page > 0:
-                self.page -= 1
-                self.plot_page()
-        elif event.key == 'escape':
-            plt.close(self.fig)
-            
+            print(f"✅ Saved: {output_path}")

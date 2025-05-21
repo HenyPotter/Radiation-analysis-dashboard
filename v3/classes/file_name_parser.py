@@ -21,12 +21,10 @@ class FilenameParser:
             "particle_type": parts[0],
             "instrument": parts[1],
             "model": parts[2],
-            "version_1": parts[3],
-            "version_2": parts[4],
-            "unit": parts[5],
-            "code": parts[6],
-            "detector_type": parts[7],
-            "material": parts[8],
+            "thing_1": parts[3],
+            "thing_2": parts[4],
+            "thing_3": parts[5],
+            "material": parts[7],
             "spectrum": parts[9]
         }
 

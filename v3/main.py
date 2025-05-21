@@ -1,29 +1,33 @@
 from classes.gras_splitter import GrasBlockSplitter
-from classes.histogram_plotter import HistogramPlotter, scan_files  # Přidán import scan_files
+from classes.histogram_plotter import HistogramPlotter, scan_files
 from classes.file_name_parser import FilenameParser
 import os
-import json
 
 def main():
-    # Spusť část pro rozdělení CSV souborů
+    # Step 1: Split GRAS CSV files
+    print("Splitting GRAS CSV files...")
     splitter = GrasBlockSplitter()
     splitter.run()
 
-    # Poté načti histogramové soubory a vykresli je
+    # Step 2: Scan for matching histogram files
     print("\nScanning for matching CSV files...")
     files = scan_files()
     if not files:
         print("No matching files found with 'GRAS_DATA_TYPE',   -1,'HIST_1D'.")
         return
+    print(f"Found {len(files)} file(s).")
 
-    pager = HistogramPlotter(files, per_page=2)
-    pager.plot_page()
+    # Step 3: Generate and save plots
+    print("Generating and saving histogram plots...")
+    plotter = HistogramPlotter(files, output_dir='output_plots')
+    plotter.plot_all()
 
-    # Nakonec spusť parser názvů CSV souborů a ulož vše do jednoho JSON
+    # Step 4: Parse filenames and save metadata to JSON
     print("\nParsing filenames and creating single JSON file...")
     parser = FilenameParser()
     parser.process_all_files()
 
+    print("\nDone.")
+
 if __name__ == "__main__":
     main()
-    
