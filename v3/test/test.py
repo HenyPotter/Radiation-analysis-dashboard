@@ -77,10 +77,10 @@ content = [table]
 content.append(Spacer(1, 12))
 content.append(Paragraph("1. SCOPE OF THE SIMULATION", header_style))
 content.append(Paragraph(
-    f"This document presents the results of computer simulations for radiation analysis performed using a local copy of GRAS "
-    f"<b><font color='green'>(version " + gras_version+ ")</font></b> in combination with Geant4 version "
-    f"<b><font color='orange'>10.07 (patch 2)</font></b> for L²SIM project "
-    f"<b><font color='orange'>{order_number}</font></b>.", normal_style))
+    f"This document presents the results of computer simulations for radiation analysis performed using a local <br/>copy of GRAS "
+    f"<b><font>(version " + gras_version+ ")</font></b> in combination with Geant4 version "
+    f"<b><font>10.07 (patch 2)</font></b> for L²SIM project "
+    f"<b><font style='italic'>{order_number}</font></b>.", normal_style))
 content.append(Spacer(1, 6))
 content.append(Paragraph("The simulation was performed for the following analyzed volumes:", normal_style))
 
@@ -99,7 +99,13 @@ def transform_filename(filename):
         transformed = filename
     if len(transformed) > 4:
         transformed = transformed[:-4]
-    return transformed
+
+    last_underscore_index = transformed.rfind('_')
+    if last_underscore_index != -1:
+        transformed = transformed[:last_underscore_index]
+
+    return transformed.replace('-DETECTOR_MATDEF', '')
+
 
 analyzed_files = sorted(file_map.keys())
 
@@ -112,7 +118,7 @@ else:
     content.append(Paragraph("<font color='red'>No analyzed volumes found in the input.</font>", highlight_style))
 
 content.append(Spacer(1, 12))
-content.append(Paragraph("Table <b><font color='red'>1.1</font></b> shows parts of the spectrum used in the simulation.", normal_style))
+content.append(Paragraph("Table <b><font color='gray'>[1.1]</font></b> shows parts of the spectrum used in the simulation.", normal_style))
 content.append(Paragraph("<i>Table 1.1: Parts of the spectrum used in the simulation</i>", normal_style))
 
 spectrum_table_data = [
@@ -130,7 +136,7 @@ spectrum_table.setStyle(TableStyle([
 content.append(spectrum_table)
 
 content.append(Spacer(1, 12))
-content.append(Paragraph("Performed analysis is summarized in table <b><font color='red'>1.2</font></b>.", normal_style))
+content.append(Paragraph("Performed analysis is summarized in table <b><font color='gray'>[1.2]</font></b>.", normal_style))
 content.append(Paragraph("<i>Table 1.2: Performed analysis parts of the spectrum used in the simulation</i>", normal_style))
 analysis_table_data = [
     ["ANALYSIS MODULE", "UNIT"],

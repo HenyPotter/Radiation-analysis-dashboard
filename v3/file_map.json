@@ -15,6 +15,22 @@
         "solar_proton/total_niel.csv",
         "solar_proton/total_non_ionising_dose_per_particle_species.csv"
     ],
+    "solar_proton_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-U1-AD585-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv": [
+        "solar_proton/block_14.csv",
+        "solar_proton/dose_spectrum.csv",
+        "solar_proton/e-_fluence_spectrum.csv",
+        "solar_proton/gamma_fluence_spectrum.csv",
+        "solar_proton/let.csv",
+        "solar_proton/let_spectrum.csv",
+        "solar_proton/niel_spectrum.csv",
+        "solar_proton/proton_fluence_spectrum.csv",
+        "solar_proton/total_dose.csv",
+        "solar_proton/total_dose_per_particle_species.csv",
+        "solar_proton/total_dose_vs_primary_kinetic_energy.csv",
+        "solar_proton/total_fluence.csv",
+        "solar_proton/total_niel.csv",
+        "solar_proton/total_non_ionising_dose_per_particle_species.csv"
+    ],
     "trapped_electron_TPS_BDS-CISHAB-MDL-0002-ELV214_v007-ELV214_v6-NA1-FP011-FP10telo001-DETECTOR_MATDEF_Silicon_PV_Spectrum1.csv": [
         "trapped_electron/block_12.csv",
         "trapped_electron/dose_spectrum.csv",
