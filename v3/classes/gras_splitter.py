@@ -37,8 +37,7 @@ class GrasBlockSplitter:
 
     def process_file(self, file_path):
         filename = os.path.basename(file_path)
-        parts = filename.split("_")
-        base_folder_name = "_".join(parts[:2]) if len(parts) >= 2 else "output"
+        base_folder_name = os.path.splitext(filename)[0]  # název složky podle jména souboru bez přípony
         output_dir = os.path.join(self.output_dir, base_folder_name)
         os.makedirs(output_dir, exist_ok=True)
 
@@ -58,19 +57,19 @@ class GrasBlockSplitter:
             title = title_match.group(1).replace(" ", "_").replace("/", "_") if title_match else f"block_{i}"
             output_path = os.path.join(output_dir, f"{title.lower()}.csv")
 
-            with open(output_path, "w", encoding="utf-8") as out:
-                out.write(block)
-            saved += 1
+            with open(output_path, "w", encoding="utf-8") as out: out.write(f"Source file: {filename}\n"); out.write(block); saved += 1
+
 
         print(f"   \033[1;32m✓ {saved} blocks saved.\033[0m")
+
+
 
     def generate_file_map(self, selected_files):
         file_map = {}
 
         for file_path in selected_files:
             filename = os.path.basename(file_path)
-            parts = filename.split("_")
-            base_folder_name = "_".join(parts[:2]) if len(parts) >= 2 else "output"
+            base_folder_name = os.path.splitext(filename)[0]
             output_dir = os.path.join(self.output_dir, base_folder_name)
 
             new_files = sorted([
@@ -85,6 +84,7 @@ class GrasBlockSplitter:
             json.dump(file_map, f, indent=4)
 
         print("\n\033[1;36m✔ File map saved to 'file_map.json'.\033[0m\n")
+
 
     def run(self):
         self.clear_screen()

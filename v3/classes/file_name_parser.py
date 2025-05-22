@@ -46,9 +46,9 @@ class CsvPropertiesCollector:
                 keys = list(csv_props.keys())
 
                 if "HIST_TITLE" in csv_props:
-                    folder = os.path.dirname(rel_csv)
+                    folder = os.path.dirname(rel_csv).replace(os.sep, "__")
                     fname = os.path.splitext(os.path.basename(rel_csv))[0]
-                    plot = f"output_plots/{folder}_{fname}.png" if folder else f"output_plots/{fname}.png"
+                    plot = f"output_plots/{folder}/{fname}.png" if folder else f"output_plots/{fname}.png"
 
                     props = {
                         "container_file": container_name,
@@ -59,6 +59,7 @@ class CsvPropertiesCollector:
                     }
                     props.update(csv_props)
                     all_properties.append(props)
+
 
 
         with open(self.output_file, 'w', encoding='utf-8') as out:
