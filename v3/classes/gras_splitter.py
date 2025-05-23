@@ -54,7 +54,7 @@ class GrasBlockSplitter:
                 continue
 
             title_match = re.search(r"'GRAS_DATA_TITLE'\s*,\s*-1\s*,\s*'([^']+)'", block)
-            title = title_match.group(1).replace(" ", "_").replace("/", "_") if title_match else f"block_{i}"
+            title = title_match.group(1).replace(" ", "_").replace("/", "_") if title_match else f"info"
             output_path = os.path.join(output_dir, f"{title.lower()}.csv")
 
             with open(output_path, "w", encoding="utf-8") as out: out.write(f"Source file: {filename}\n"); out.write(block); saved += 1
