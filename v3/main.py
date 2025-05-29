@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 from classes.gras_splitter import GrasBlockSplitter
 from classes.histogram_plotter import HistogramPlotter, scan_files
-from classes.file_name_parser import CsvPropertiesCollector
+from classes.file_name_parser import CsvPropertiesCollector, add_prefix_to_file_map
 
 
 def clear_screen():
@@ -14,7 +14,6 @@ def clear_screen():
 def main():
     # 1) Split GRAS CSVs into blocks
     print("🔧 Splitting GRAS CSV files...")
-        # initialize GRAS block splitter (uses default configuration)
     splitter = GrasBlockSplitter()
     splitter.run()
     time.sleep(0.5)
@@ -41,10 +40,17 @@ def main():
     time.sleep(0.5)
     clear_screen()
 
-    # 4) Collect CSV header properties
+    # 4) Přidání prefixu do file_map.json
+    print("🔧 Přidávám prefix 'generated-data/' do file_map.json (pokud tam není)...")
+    add_prefix_to_file_map('file_map.json', prefix='generated-data')
+    time.sleep(0.5)
+    clear_screen()
+
+    # 5) Collect CSV header properties
     print("📝 Extracting CSV header properties and saving to JSON...")
     collector = CsvPropertiesCollector(
         root_folder='generated-data',
+        file_map_path='file_map.json',
         output_file='properties.json'
     )
     collector.collect_properties()
