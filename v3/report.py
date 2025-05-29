@@ -17,13 +17,13 @@ order_number = "123456789"
 gras_version = "5.0.1"
 generated_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 title = "Simulace zařízení UIEHTGUWEIFGHS298"
-logo_path = "logo.png"
+logo_path = "report/logo.png"
 trapped_proton_name = "Trapped Proton"
 trapped_electron_name = "Trapped Electron"
 solar_proton_name = "Solar Proton"
 
 # Register fonts
-ttf_folder = os.path.join(os.path.dirname(__file__), 'fonts')
+ttf_folder = os.path.join(os.path.dirname(__file__), 'report')
 pdfmetrics.registerFont(TTFont('ArialNarrow', os.path.join(ttf_folder, 'arialnarrow.ttf')))
 pdfmetrics.registerFont(TTFont('ArialNarrowBold', os.path.join(ttf_folder, 'arialnarrow_bold.ttf')))
 pdfmetrics.registerFont(TTFont('ArialNarrowBoldItalic', os.path.join(ttf_folder, 'arialnarrow_bolditalic.ttf')))
