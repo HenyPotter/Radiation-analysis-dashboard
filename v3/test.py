@@ -102,17 +102,12 @@ with open(props_path, 'r') as pf:
     props_list = json.load(pf)
 
 # Build a map from info.csv path to physical volume
-# using properties.json
 pv_map = {}
 for item in props_list:
-    # file_path in properties.json points to CSV; we need the corresponding info.csv path
     base = os.path.dirname(item['file_path'])
-    info_csv_path = f"{base}"
-    pv_map[info_csv_path] = item.get('physical_volume', '')
-    print
+    pv_map[base] = item.get('physical_volume', '')
 
 # List analyzed volumes
-analyzed_files = sorted(file_map.keys())
 analyzed_files = sorted(file_map.keys())
 if analyzed_files:
     for file_key in analyzed_files:
@@ -132,16 +127,26 @@ label_map = {"solar_proton": solar_proton_name, "trapped_proton": trapped_proton
 for file_key in analyzed_files:
     spectrum_type = '_'.join(file_key.split('_')[:2])
     paths = file_map[file_key]
+    folder = os.path.dirname(paths[0]) if paths else ""
     info_path = next((p for p in paths if p.endswith('info.csv')), None)
     event_count = 'N/A'
     if info_path and os.path.exists(info_path):
         with open(info_path, 'r', newline='') as f_csv:
             reader = csv.reader(f_csv)
             rows = [row for row in reader if row]
-        last_row = rows[-1]
-        event_count = last_row[0].strip().strip("'\"")
+            last_row = rows[-1]
+            event_count = last_row[0].strip().strip("'\"")
     spectrum_label = label_map.get(spectrum_type, spectrum_type)
-    physical_vol = pv_map.get(file_key, '')
+    raw_pv = pv_map.get(folder, '')
+
+    # Format PV as XXX-YYYYY
+    if len(raw_pv) >= 9 and raw_pv[3] == '-':
+        physical_vol = f"{raw_pv[:3]}-{raw_pv[4:9]}"
+    elif len(raw_pv) >= 8:
+        physical_vol = f"{raw_pv[:3]}-{raw_pv[3:8]}"
+    else:
+        physical_vol = raw_pv
+
     spectrum_table_data.append([spectrum_label, event_count, physical_vol])
 
 spectrum_table = Table(spectrum_table_data, colWidths=[60*mm, 60*mm, 60*mm])
@@ -154,7 +159,7 @@ spectrum_table.setStyle(TableStyle([
 ]))
 content.append(spectrum_table)
 
-# Analysis table (existing)
+# Analysis table
 content.append(Spacer(1, 12))
 content.append(Paragraph("Performed analysis is summarized in table <b><font color='gray'>[1.2]</font></b>.", normal_style))
 content.append(Paragraph("<i>Table 1.2: Performed analysis parts of the spectrum used in the simulation</i>", normal_style))
