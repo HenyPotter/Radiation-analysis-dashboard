@@ -159,14 +159,45 @@ spectrum_table.setStyle(TableStyle([
 ]))
 content.append(spectrum_table)
 
-# Analysis table
-content.append(Spacer(1, 12))
-content.append(Paragraph("Performed analysis is summarized in table <b><font color='gray'>[1.2]</font></b>.", normal_style))
-content.append(Paragraph("<i>Table 1.2: Performed analysis parts of the spectrum used in the simulation</i>", normal_style))
-analysis_table_data = [
-    ["ANALYSIS MODULE", "UNIT"],
-    ["{Analysis module – GRAS module type}", "{Unit – same for all outputs?}"]
-]
+# === Dynamic Analysis Table based on CSV content ===
+
+def parse_analysis_modules_from_csv(csv_path):
+    """Parse GRAS_MODULE_TYPE and unit from CSV file."""
+    module_type = None
+    unit = None
+
+    with open(csv_path, newline='') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if not row:
+                continue
+            # Find GRAS_MODULE_TYPE line
+            if row[0].strip("'\"") == "GRAS_MODULE_TYPE":
+                if len(row) > 2:
+                    module_type = row[2].strip("'\"")
+            # Find line with unit info (heuristic)
+            elif row[0].startswith("'") and row[0].endswith("'") and not row[0].startswith("'GRAS_"):
+                if len(row) > 1 and row[1].strip("'\""):
+                    unit_candidate = row[1].strip("'\"")
+                    if any(c.isalpha() for c in unit_candidate):
+                        unit = unit_candidate
+                        break
+    return module_type, unit
+
+all_analysis_modules = {}
+
+for file_key, files in file_map.items():
+    for file_path in files:
+        basename = os.path.basename(file_path).lower()
+        if basename.endswith('.csv') and not basename.startswith('info'):
+            mod_type, unit = parse_analysis_modules_from_csv(file_path)
+            if mod_type and unit:
+                all_analysis_modules[mod_type] = unit
+
+analysis_table_data = [["ANALYSIS MODULE", "UNIT"]]
+for mod, unit in sorted(all_analysis_modules.items()):
+    analysis_table_data.append([mod, unit])
+
 analysis_table = Table(analysis_table_data, colWidths=[80*mm, 80*mm])
 analysis_table.setStyle(TableStyle([
     ("BACKGROUND", (0, 0), (-1, 0), colors.teal),
@@ -175,15 +206,10 @@ analysis_table.setStyle(TableStyle([
     ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
     ("ALIGN", (0, 0), (-1, -1), "CENTER"),
 ]))
-content.append(analysis_table)
-
 content.append(Spacer(1, 12))
-content.append(Paragraph("{Analysis module – GRAS_MODULE_TYPE}", normal_style))
-content.append(Paragraph(
-    "DOSE … TID analysis<br/>NIEL … TNID analysis<br/>LET … LET analysis<br/>FLUENCE … Fluence analysis",
-    normal_style
-))
+content.append(Paragraph("Performed analysis is summarized in table <b><font color='gray'>[1.2]</font></b>.", normal_style))
+content.append(Paragraph("<i>Table 1.2: Performed analysis parts of the spectrum used in the simulation</i>", normal_style))
+content.append(analysis_table)
 
 # Build PDF
 doc.build(content)
-print("PDF generated as report_header_stretched.pdf")
