@@ -149,7 +149,10 @@ for file_key in analyzed_files:
 
     spectrum_table_data.append([spectrum_label, event_count, physical_vol])
 
-spectrum_table = Table(spectrum_table_data, colWidths=[60*mm, 60*mm, 60*mm])
+sorted_rows = [spectrum_table_data[0]] + sorted(spectrum_table_data[1:], key=lambda row: row[2])
+
+spectrum_table = Table(sorted_rows, colWidths=[60*mm, 60*mm, 60*mm])
+
 spectrum_table.setStyle(TableStyle([
     ("BACKGROUND", (0, 0), (-1, 0), colors.teal),
     ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
