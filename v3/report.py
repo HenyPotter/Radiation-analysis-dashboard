@@ -207,7 +207,7 @@ def get_tid_result(tid_csv_path):
             reader = csv.reader(f)
             rows = [row for row in reader if row and not row[0].startswith("#")]
 
-            for row in reversed(rows):
+            for row in reversed(rows): 
                 if len(row) >= 2:
                     try:
                         result = float(row[0])
